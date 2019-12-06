@@ -8,8 +8,14 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class Page1 {
 
+  nome = "";
+
   constructor(public navCtrl: NavController) {
 
   }
+
+  insereNome(novoNome: string) {
+    this.nome = novoNome;
+}
 
 }

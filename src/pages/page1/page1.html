@@ -8,13 +8,13 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <img src="assets/icon/favicon.ico" alt="" />
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-list>  
+    <ion-item>  
+      <ion-input id="editNome" type="text" #editNome></ion-input>
+    </ion-item>
+    <button ion-button id="btnCumprimentar" (click)="insereNome(editNome.value)">Cumprimentar</button>
+    <ion-item>
+      <ion-label id="labelMensagem">Alô, {{nome ? nome : 'Mundo'}}!</ion-label>
+    </ion-item>    
+  </ion-list>
 </ion-content>
